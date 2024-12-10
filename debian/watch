@@ -1,2 +1,2 @@
-version=3
-http://sf.net/lightspark/lightspark-(.*)\.tar\.bz2
+version=4
+options="mode=git,pretty=0.8.7+git.%cd.%h" https://github.com/lightspark/lightspark HEAD

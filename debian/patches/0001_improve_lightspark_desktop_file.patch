@@ -1,0 +1,25 @@
+Description: Improve lightspark desktop file
+ Run in wayland automatically and 
+ dealing with lintian warning:
+ lightspark: desktop-entry-invalid-category
+ lightspark: desktop-mime-but-no-exec-code
+ 
+Author: Don Xu <me@eipi.fun>
+Origin: other
+Forwarded: no|not-needed
+Last-Update: 2024-12-11
+
+--- lightspark-0.8.7+git.20241203.79371ce.orig/media/lightspark.desktop
++++ lightspark-0.8.7+git.20241203.79371ce/media/lightspark.desktop
+@@ -2,9 +2,9 @@
+ Name=Lightspark
+ Comment=An alternative flash player
+ TryExec=lightspark
+-Exec=lightspark
++Exec=SDL_VIDEODRIVER='wayland,x11' lightspark %u
+ Icon=lightspark
+ Type=Application
+-Categories=Multimedia;Game;AudioVideo;Video;Player;Viewer;
++Categories=Game;AudioVideo;Video;Player;Viewer;
+ MimeType=application/x-shockwave-flash;
+ StartupNotify=true

@@ -1,0 +1,2 @@
+lightspark: library-not-linked-against-libc
+lightspark: package-has-unnecessary-activation-of-ldconfig-trigger
